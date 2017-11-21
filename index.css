@@ -8,19 +8,42 @@
         'x promo promo promo k' 'z l m r u';
 }
 
+[id='visited']:not(:checked) ~ [id='joke']:not(:checked) ~ .layout
+{
+    grid-template-areas: 'a 0 0 b c' 'p d d f f' 'y s s s o'
+        'x promo promo promo k' 'z m r l u';
+}
+
+[id='tv-programm']:not(:checked) ~ [id='car-news']:not(:checked) ~ .layout
+{
+    grid-template-areas: 'a 0 0 b c' 'p d d f f' 'y s s s o'
+        'x promo promo promo k' 'z l r m u';
+}
+
+[id='visited']:not(:checked) ~ [id='joke']:not(:checked) ~ input[
+id='tv-programm']:not(:checked) ~ [id='car-news']:not(:checked) ~ .layout
+{
+    grid-template-areas: 'a 0 0 b c' 'p d d f f' 'y s s s o'
+        'x promo promo promo k' 'z r l m u';
+}
+
 .settings
 {
+    display: flex;
+    flex-direction: column;
+    cursor: default;
     position: relative;
     height: 200px;
-    background-color: pink;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 0 2px 0 #0000001a, 0 2px 6px 0 #0000001a;
     width: 200px;
 }
 
 .scroll
 {
-    overflow: scroll;
-    overflow-x: hidden;
-    max-height: 240px;
+    overflow: auto;
+    height: 200px;
     width: 270px;
 }
 
@@ -109,6 +132,7 @@
 .find-button
 {
     position: absolute;
+    display: inline;
     font-size: 16px;
     width: 88px;
     height: 36px;
@@ -124,6 +148,7 @@
 
 .search-line
 {
+    display: inline;
     width: 731px;
     height: 36px;
     border: 2px solid #fcca42;
@@ -176,7 +201,15 @@ li
 .fourthJoke,
 .fifthJoke,
 label.next,
-.settings
+.settings,
+.car-news,
+input,
+.visited,
+.trafic-jams,
+.weather,
+.map,
+.jokes,
+.tv-show
 {
     display: none;
 }
@@ -196,7 +229,15 @@ label.next,
 [id='button4']:checked ~ .next[for='button5'],
 [id='button5']:checked ~ .fifthJoke,
 [id='button5']:checked ~ .next[for='button1'],
-input[type='checkbox']:checked ~ .settings
+input[type='checkbox']:checked ~ .settings,
+[id='car-news']:checked ~ main .car-news,
+[id='weather']:checked ~ main .weather,
+[id='jam']:checked ~ main .trafic-jams,
+[id='tv-programm']:checked ~ main .tv-show,
+[id='map']:checked ~ main .map,
+[id='joke']:checked ~ main .jokes,
+[id='visited']:checked ~ main .visited,
+main form input
 {
     display: block;
 }

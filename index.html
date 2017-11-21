@@ -6,6 +6,13 @@
     <title>Задача «Морда»</title>
 </head>
 <body>
+    <input type="checkbox" id="visited" name="button" checked>
+    <input type="checkbox" id="joke" name="button" checked>
+    <input type="checkbox" id="tv-programm" name="button" checked>
+    <input type="checkbox" id="car-news" name="button" checked>
+    <input type="checkbox" id="jam" name="button" checked>
+    <input type="checkbox" id="map" name="button" checked>
+    <input type="checkbox" id="weather" name="button" checked>
     <main class="layout">
         <div class="city">
             <p class="half-opacity">Екатеринбург</p>
@@ -14,13 +21,19 @@
             <label for="button">Настройки</label>
             <input type="checkbox" id="button">
             <div class="settings">
-                <p>конкретные</p>
+                <label for="visited" class="set blue-title">Посещаемые</label><br>
+                <label for="joke" class="set blue-title">Анекдоты</label><br>
+                <label for="tv-programm" class="set blue-title">Телепрограмма</label><br>
+                <label for="car-news" class="set blue-title">Авто-новости</label><br>
+                <label for="jam" class="set blue-title">Пробки</label><br>
+                <label for="map" class="set blue-title">Карты</label><br>
+                <label for="weather" class="set blue-title">Погода</label><br>
             </div>
         </div>
         <div class="c">
             <form>
-                <p>Login<input type="search" class=""></p>
-                <p>Password <input type="search" class=""></p>
+                <p>Login<input type="search"></p>
+                <p>Password <input type="search"></p>
             </form>
         </div>
         <div class="d">
@@ -118,7 +131,7 @@
                 </div>
             </div>
         </div>
-        <div class="middle-side">
+        <section class="middle-side">
             <div class="tv-show">
                 <h2><a href="https://tv.yandex.ru/"
                     class="blue-title">Телепрограмма</a></h2>
@@ -141,7 +154,7 @@
                     <p>Новая модификация Lada Vesta Rally Sprint‍</p>
                 </div>
             </div>
-        </div>
+        </section>
         <div class="right-side">
             <div class="weather">
                 <h2><a href="https://yandex.ru/pogoda/yekaterinburg" class="blue-title">Погода</a>
@@ -158,7 +171,7 @@
                 <h2><a href="https://yandex.ru/maps/54/yekaterinburg/probki"
                     class="blue-title">Пробки</a>
                     <img src="trafficlightyellow.png" alt="yellow">4 балла</h2>
-                    <p>Местами затруднения</p>
+                <p>Местами затруднения</p>
             </div>
         </div>
     </main>
