@@ -1,0 +1,202 @@
+.layout
+{
+    font: 81.25% Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: 350px 1fr 1fr 1fr 180px;
+    grid-template-rows: 60px auto 140px auto 500px;
+    grid-template-areas: 'a 0 0 b c' 'p d d f f' 'y s s s o'
+        'x promo promo promo k' 'z l m r u';
+}
+
+.settings
+{
+    position: relative;
+    height: 200px;
+    background-color: pink;
+    width: 200px;
+}
+
+.scroll
+{
+    overflow: scroll;
+    overflow-x: hidden;
+    max-height: 240px;
+    width: 270px;
+}
+
+.news
+{
+    font: .75em/1.6em Verdana, sans-serif;
+    line-height: 2;
+}
+
+.blue-title:hover
+{
+    color: #f00;
+}
+
+.blue-title
+{
+    color: #0054b9;
+    text-decoration: none;
+}
+
+.row
+{
+    padding-right: 20px;
+}
+
+.city
+{
+    grid-area: a;
+    margin-left: 35px;
+    margin-top: 12px;
+}
+
+.b
+{
+    grid-area: b;
+}
+
+.d
+{
+    font-size: 16px;
+    grid-area: d;
+}
+
+.c
+{
+    width: 180px;
+    height: 120px;
+    padding-left: 10px;
+    box-shadow: 0 0 2px 0 #0000001a, 0 2px 6px 0 #0000001a;
+    grid-area: c;
+}
+
+.sun
+{
+    width: 25px;
+}
+
+.i
+{
+    grid-area: i;
+}
+
+.browser
+{
+    grid-area: f;
+}
+
+.logo
+{
+    flex: 0 0 auto;
+    padding-left: 20px;
+    text-align: right;
+    grid-area: y;
+}
+
+.search
+{
+    grid-area: s;
+}
+
+.search-block
+{
+    margin-top: 20px;
+}
+
+.find-button
+{
+    position: absolute;
+    font-size: 16px;
+    width: 88px;
+    height: 36px;
+    border: 2px solid #fcca42;
+    background: #fcca42;
+    cursor: pointer;
+}
+
+.data
+{
+    font-size: 12px;
+}
+
+.search-line
+{
+    width: 731px;
+    height: 36px;
+    border: 2px solid #fcca42;
+}
+
+.middle-side
+{
+    grid-area: m;
+}
+
+.promo
+{
+    grid-area: promo;
+}
+
+.left-side
+{
+    max-width: 80%;
+    grid-area: l;
+}
+
+.right-side
+{
+    grid-area: r;
+}
+
+li
+{
+    margin-left: -23px;
+}
+
+.half-opacity
+{
+    opacity: .5;
+}
+
+.img
+{
+    display: inline;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.firstJoke,
+.secondJoke,
+.thirdJoke,
+.fourthJoke,
+.fifthJoke,
+label.next,
+.settings
+{
+    display: none;
+}
+
+.layout .left-side input 
+{
+    display: none;
+}
+
+[id='button1']:checked ~ .firstJoke,
+[id='button1']:checked ~ .next[for='button2'],
+[id='button2']:checked ~ .secondJoke,
+[id='button2']:checked ~ .next[for='button3'],
+[id='button3']:checked ~ .thirdJoke,
+[id='button3']:checked ~ .next[for='button4'],
+[id='button4']:checked ~ .fourthJoke,
+[id='button4']:checked ~ .next[for='button5'],
+[id='button5']:checked ~ .fifthJoke,
+[id='button5']:checked ~ .next[for='button1'],
+input[type='checkbox']:checked ~ .settings
+{
+    display: block;
+}
