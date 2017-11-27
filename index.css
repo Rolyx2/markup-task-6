@@ -33,8 +33,8 @@ id='tv-programm']:not(:checked) ~ [id='car-news']:not(:checked) ~ .layout
     flex-direction: column;
     cursor: default;
     position: relative;
-    height: 200px;
-    text-align: center;
+    padding: 10% 0 0 10%;
+    height: 150px;
     background-color: white;
     box-shadow: 0 0 2px 0 #0000001a, 0 2px 6px 0 #0000001a;
     width: 200px;
@@ -72,8 +72,7 @@ id='tv-programm']:not(:checked) ~ [id='car-news']:not(:checked) ~ .layout
 .city
 {
     grid-area: a;
-    margin-left: 35px;
-    margin-top: 12px;
+    margin: 12px 0 0 35px;
 }
 
 .b
@@ -90,7 +89,7 @@ id='tv-programm']:not(:checked) ~ [id='car-news']:not(:checked) ~ .layout
 .c
 {
     width: 180px;
-    height: 120px;
+    height: 150px;
     padding-left: 10px;
     box-shadow: 0 0 2px 0 #0000001a, 0 2px 6px 0 #0000001a;
     grid-area: c;
@@ -104,6 +103,11 @@ id='tv-programm']:not(:checked) ~ [id='car-news']:not(:checked) ~ .layout
 .i
 {
     grid-area: i;
+}
+
+.settings
+{
+    display: block;
 }
 
 .browser
@@ -127,6 +131,16 @@ id='tv-programm']:not(:checked) ~ [id='car-news']:not(:checked) ~ .layout
 .search-block
 {
     margin-top: 20px;
+}
+
+.find-button::after
+{
+    content: '';
+    position: absolute;
+    top: -4px;
+    right: -30px;
+    border: 19px solid transparent;
+    border-left: 9px solid #fc0;
 }
 
 .find-button
@@ -237,7 +251,31 @@ input[type='checkbox']:checked ~ .settings,
 [id='map']:checked ~ main .map,
 [id='joke']:checked ~ main .jokes,
 [id='visited']:checked ~ main .visited,
-main form input
+main form input,
+.settings label
 {
     display: block;
 }
+
+.settings label::before
+{
+    content: '';
+    background-image: url('close.png');
+    display: inline-block;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+}
+
+input[id='visited']:checked ~ main label[for='visited']::before,
+input[id='jam']:checked ~ main label[for='jam']::before,
+input[id='tv-switch']:checked ~ main label[for='tv-switch']::before,
+input[id='weather']:checked ~ main label[for='weather']::before,
+input[id='car-news']:checked ~ main label[for='car-news']::before,
+input[id='map']:checked ~ main label[for='map']::before,
+input[id='tv-programm']:checked ~ main label[for='tv-programm']::before,
+input[id='joke']:checked ~ main label[for='joke']::before
+{
+    background-image: url('vision-button.png');
+}
+
