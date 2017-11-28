@@ -130,29 +130,27 @@ id='tv-programm']:not(:checked) ~ [id='car-news']:not(:checked) ~ .layout
 
 .search-block
 {
+    display: flex;
     margin-top: 20px;
-}
-
-.find-button::after
-{
-    content: '';
-    position: absolute;
-    top: -4px;
-    right: -30px;
-    border: 19px solid transparent;
-    border-left: 9px solid #fc0;
 }
 
 .find-button
 {
-    position: absolute;
-    display: inline;
     font-size: 16px;
     width: 88px;
     height: 36px;
     border: 2px solid #fcca42;
     background: #fcca42;
     cursor: pointer;
+    display: inline;
+}
+
+.triangle
+{
+    display: flex;
+    content: '';
+    border: 18px solid transparent;
+    border-left: 11px solid #fc0;
 }
 
 .data
@@ -162,15 +160,25 @@ id='tv-programm']:not(:checked) ~ [id='car-news']:not(:checked) ~ .layout
 
 .search-line
 {
-    display: inline;
-    width: 731px;
+    display: table-cell;
+    width: 80%;
     height: 36px;
-    border: 2px solid #fcca42;
+    border: 2px solid #ffdb4d;
+    font-size: 16px;
+    line-height: 36px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-right: -5px;
 }
 
 .middle-side
 {
     grid-area: m;
+}
+
+.car-picture
+{
+    width: 100%;
 }
 
 .promo
