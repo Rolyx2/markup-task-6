@@ -136,18 +136,20 @@ id='tv-programm']:not(:checked) ~ [id='car-news']:not(:checked) ~ .layout
 
 .find-button
 {
+    position: relative;
     font-size: 16px;
     width: 88px;
     height: 36px;
     border: 2px solid #fcca42;
     background: #fcca42;
     cursor: pointer;
-    display: inline;
 }
 
-.triangle
+.find-button::after
 {
-    display: flex;
+    left: 86px;
+    top: -2px;
+    position: absolute;
     content: '';
     border: 18px solid transparent;
     border-left: 11px solid #fc0;
@@ -160,15 +162,12 @@ id='tv-programm']:not(:checked) ~ [id='car-news']:not(:checked) ~ .layout
 
 .search-line
 {
-    display: table-cell;
-    width: 80%;
+    display: block;
+    flex-grow: 1;
     height: 36px;
     border: 2px solid #ffdb4d;
     font-size: 16px;
     line-height: 36px;
-    padding: 0 10px;
-    box-sizing: border-box;
-    margin-right: -5px;
 }
 
 .middle-side
